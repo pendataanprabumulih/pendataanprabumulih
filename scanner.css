@@ -18,7 +18,7 @@
 }
 
 .banner {
-    background-color: #52B2BF;
+    background-color: #f97272;
     padding : 3px;
     display : block;
     color : #FFFFFF;
@@ -122,7 +122,7 @@ p.keterangan {
 }
 
 p.keterangan a {
-    color: #fe4236;
+    color:#0d98ba ;
     font-weight: 800;
 
 }
@@ -138,7 +138,7 @@ p.ungu {
 }
 
 .reScan{
-	border : 1px solid #4863A0;
+	border : 1px solid #f97272;
     /*border-radius : 2%;*/
     width : 49.5%;
     height : 250px;
@@ -148,13 +148,13 @@ p.ungu {
     position : static;
     background-color: #FFFFFF;
     /*border-bottom : 50px solid #A7C7E7;*/
-    border-bottom : 20px solid #4863A0;
+    border-bottom : 20px solid #f97272;
     align-content: center;
-    box-shadow: 2px 4px 10px #4863A0;
+    box-shadow: 2px 4px 10px #0d98ba;
 }
 
 .tandaiTera {
-	border : 1px solid #4863A0;
+	border : 1px solid #f97272;
     /*border-radius : 2%;*/
     width : 49.5%;
     height : 250px;
@@ -163,9 +163,9 @@ p.ungu {
     background-color: #FFFFFF;
     margin-left : auto;
     position : static;
-    box-shadow: 2px 4px 10px #4863A0;
+    box-shadow: 2px 4px 10px #0d98ba;
     /*border-bottom : 50px solid #0492c2;*/
-    border-bottom : 20px solid #4863A0;
+    border-bottom : 20px solid #f97272;
 }
 
 .loader {
@@ -238,7 +238,7 @@ p.ungu {
   }
 
 .topMenu {
-    background-color: #083378;
+    background-color: #0d98ba;
     top : 0;
     overflow: hidden;
     position: fixed;
@@ -249,6 +249,7 @@ p.ungu {
     color : #f2f2f2;
     padding-top: 7px;
     font-size: 20px;
+    text-align: center;
 }
 
 
@@ -261,7 +262,7 @@ p.ungu {
 }
 
 .topMenu a:hover, .topMenu a:active  {
-    background-color: #04AA6D;
+    background-color: grey;
     color: white;
 }
 
