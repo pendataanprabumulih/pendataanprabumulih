@@ -1,0 +1,764 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <link rel="stylesheet" href="wilayah.css">
+        <!-- Roboto Font -->    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">   
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        </style>
+        <!-- END OF ROBOTO -->   
+
+        <script language="JavaScript" src="bin/barret.js"></script>
+        <script language="JavaScript" src="bin/multiple.js"></script>    
+        <script language="JavaScript" src="bin/rsa.js"></script>
+
+    </head>
+    <body>
+        
+        <div class="topMenu">
+            <nav id="navigasi">
+                | 
+                <a class="active menuUtama" href=#>Menu Utama</a> |
+                <a class="active cariByKatakunci" href=#>Cari dgn Katakunci</a> |    
+                <a class="active scanTandaiTera" href=#>Scan & Tandai Tera</a> |
+            </nav>
+        </div>
+
+        <!--<div class="main">-->
+        <form id="pendataanForm">
+            
+        <div class="container py-2 my-5 border" data-role="page" id="page1">
+            <div class="row mx-1 gx-5 mb-3 justify-content-center py-1 px-2" style="background-color: #1E4C80; border-radius : 7px;">
+                <h4 style="color:#FFFFFF;padding-top: 5px; font-family: 'Roboto', sans-serif;;">PENDATAAN WILAYAH</h4>
+            </div>
+            <div class="row mx-1 gx-5 mb-3">
+                <div class="col" id="A">
+                    <select class="form-control" id="pilih_psr" name="pilih_psr">
+
+                    </select>                   
+                </div>
+            </div>
+            <div class="row mx-1">
+                <div class="col text-center">
+                    <button type="button" class="btn pilihPsr" data-role="none">PILIH</button>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5 my-5 border" data-role="page" id="page2">
+            <div class="jumbotron jumbo_page2">
+            </div>
+            <div class="row my-4 mx-1 gx-5 mb-3 py-2 px-2 btn-info yy">
+                <h4 class="xx">DATA WAJIB TERA ULANG</h4>
+            </div>
+            <div class="row mx-1 gx-5 mb-3">
+                <div class="col">
+                    <label for="Nama" class="form-label">Nama WTU / Nama Usaha</label>
+                    <input type="text" class="form-control" id="Nama" name="Nama" placeholder="">            
+                </div>
+            </div>
+            
+            <div class="row mx-1 gx-5 mb-3">
+                <div class="col">
+                    <label for="komoditi" class="form-label">Pilih Jenis Usaha</label>
+                    <!--<input type="text" class="form-control" id="komoditi" name="komoditi" placeholder="">-->
+                    <select class="form-control" name="komoditi" id="komoditi">
+
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row mx-1 gx-5 mb-3">
+                <div class="col">
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <!--<input type="text" class="form-control" name="los" id="los" placeholder="" value="-">-->
+                    <textarea name="alamat" id="alamat" rows="6" cols="50"></textarea>            
+                </div>
+            </div>
+            <div class="row mx-1 gx-5 mb-3">
+                <div class="col">
+                    <label for="hp" class="form-label">Nomor HP / Whatsapp</label>
+                    <input type="text" class="form-control" name="hp" id="hp" value="-" placeholder="">            
+                </div>
+            </div>
+            <div class="row mx-1 gx-5 mb-3">
+                <div class="col text-center pb-2">
+                    <button type="button" class="btn next_uttp" data-role="none">Selanjutnya ...</button>
+                </div>
+            </div>
+        </div>        
+        <div class="container py-5 my-5 border" data-role="page" id="page3">
+            <div class="jumbotron jumbo_page3">
+            </div>
+            <div class="row mx-1 gx-5 mb-3">
+                <div class="col-md-6 py-2">
+                    <div class="mr-1 px-2 py-2 border">
+                        <div class="mb-3 px-2 py-2 judulFormUTTP">
+                            <h4 class="kk">UTTP 1</h4>
+                        </div>
+        
+                        <div class="mb-3">
+                            <label for="uttp1" class="form-label">Jenis UTTP</label>
+                            <select class="form-control pilih_uttp" name="uttp1" id="uttp1">
+                                <!--
+                                <option value="">Pilih jenis UTTP</option>
+                                <option value="TM - 25 kg - 20 g">TM - 25 kg</option>
+                                <option value="TM - 10 kg - 10 g">TM - 10 kg</option>
+                                <option value="TM - 5 kg - 5 g">TM - 5 kg</option>
+                                <option value="TM - 3 kg - 3 g">TM - 3 kg</option>
+                                <option value="TS - 500 kg - 100 g">TS - 500 kg</option>
+                                <option value="TS - 300 kg - 100 g">TS - 300 kg</option>
+                                <option value="TS - 150 kg - 100 g">TS - 150 kg</option>
+                                <option value="DL - 110 kg - 100 g">DL - 110 kg</option>
+                                <option value="DL - 50 kg - 100 g">DL - 50 kg</option>
+                                <option value="DL - 25 kg - 100 g">DL - 25 kg</option>
+                                <option value="N - 1000 g - 500 mg">N - 1000 g</option>
+                                <option value="N - 500 g - 250 mg">N - 500 g</option>
+                                <option value="N - 250 g - 125 mg">N - 250 g</option>
+                                <option value="N - 100 g - 50 mg">N - 100 g</option>
+                                <option value="N - 50 g - 25 mg">N - 50 g</option>
+                                <option value="TE - - ">TE</option>
+                                <option value="TP - - ">TP</option>
+                                -->
+                              </select>                        
+                        </div>
+                        <div class="mb-3 to_hide" hidden><label for="kap1" class="form-label">Kapasitas</label>
+                            <input type="text" class="form-control" name="kap1" id="kap1" placeholder="" readonly>     
+                        </div>        
+                        <div class="mb-3 to_hide" hidden>
+                            <label for="d1" class="form-label">Dayabaca</label>
+                            <input type="text" class="form-control" name="d1" id="d1" placeholder="" readonly> 
+                        </div>      
+                        <div class="mb-3 to_hide" hidden>
+                            <label for="merk1" class="form-label">Merek (Khusus TE dan TP)</label>
+                            <input type="text" class="form-control" name="merk1" id="merk1" placeholder="" readonly> 
+                        </div>      
+                        <div class="mb-3 to_hide" hidden>
+                            <label for="model1" class="form-label">Model (Khusus TE dan TP)</label>
+                            <input type="text" class="form-control" name="model1" id="model1" placeholder="" readonly> 
+                        </div>
+                        <div class="mb-3">
+                            <label for="sn" class="form-label">Serial Number (optional)</label>
+                            <input type="text" class="form-control" name="sn" id="sn" placeholder="">
+                        </div>                        
+                        <div class="mb-3">
+                            <label for="tahunTera1" class="form-label">Tahun Tera</label>
+                            <select class="form-control" name="tahunTera1" id="tahunTera1">
+
+                            </select> 
+                        </div>
+                        <div class="mb-3">
+                            <label for="qr_code" class="form-label">Kode QR</label>
+                            <input type="text" class="form-control" name="qr_code" id="qr_code" value="" placeholder="" readonly>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+            <div>
+                <div class="col text-center pb-2">
+					<input type="hidden" class="form-control" name="lat" id="lat">
+					<input type="hidden" class="form-control" name="long" id="long">
+                    <button type="button" class="btn btn-info form-control" id="pair_the_data" data-role="none">Pair with QRCode</button>
+					<button type="button" class="btn btn-info form-control" id="entry_the_data" data-role="none" hidden>Submit</button>
+					<button class="btn btn-info form-control d-none" id="loading_data" type="button" disabled data-role="none">
+						<span class="spinner-border spinner-border-sm loadingSpinner" role="status" aria-hidden="true"></span>
+						Loading...
+					</button>
+                </div>
+            </div>                
+        </div>        
+        <div class="container py-5 my-5 border" data-role="page" id="page4">
+            <div class="alert alert-danger msg_container" role="alert">
+            </div>
+        </div>
+        <div class="container py-5 my-5 border" data-role="page" id="page5">
+            <div class="alert alert-primary msg_container_page5" role="alert">
+            </div>
+        </div>
+        <div class="container py-5 my-5 border" data-role="page" id="page6" width="640" height="480" style="text-align: center;">
+            <div class="alert alert-primary msg_container_page6" role="alert" style="background-color : #028A0F;">
+            </div>
+            <div class="d-flex align-items-center text-success">
+                <strong>Memindai QRCode...</strong>
+                <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+            </div>
+            <video id="video" autoplay style="max-width : 100%; max-height : 100%;"></video>
+        </div>
+        </form>
+        <!--</div>-->    
+
+        <script>
+            //Sesuai
+            urlDataUttp = "https://script.google.com/macros/s/AKfycbz_Je2ZXuIRFmxWdYpQTbgWbEa4iqU9ucJj1FrPK8hoql-UtKnFbBj-upEFOvWU7ZYH/exec";
+
+            const selectUttp = document.getElementById('uttp1');
+            fetch(urlDataUttp)
+            .then(datas => datas.json())
+            .then(datas => {
+                const optionElemen = document.createElement('option');
+                optionElemen.value = '';
+                optionElemen.innerHTML = 'Pilih jenis UTTP';    
+                selectUttp.appendChild(optionElemen);
+                if (datas.result === 'success') {
+                    for (let k of datas.data) {
+                        if (k[0] != 'nama') {
+                            let optionElemen = document.createElement('option');
+                            optionElemen.value = `${k[0]} - ${k[1]} - ${k[2]}`;
+                            k[1] === '-'? optionElemen.innerHTML = k[0] : optionElemen.innerHTML = `${k[0]} - ${k[1]}`;
+                            selectUttp.appendChild(optionElemen);
+                        }
+                    }
+                }
+            });
+            
+        </script>
+
+        <script>
+            //sesuai
+            const UrlKelurahan = "https://script.google.com/macros/s/AKfycbxxWf-43TUg5XvBOes_r89pANhi6fCOQgqhF_SwEmjJMWSIvv9BSDEsX2ZCpUGQDMRg/exec";
+
+            const selectKel = document.getElementById('pilih_psr');
+            const divKel = document.getElementById('A');
+            divKel.hidden = true;
+            document.querySelector('.pilihPsr').hidden = true;
+            fetch(UrlKelurahan)
+                .then(datas => datas.json())
+                .then(datas => {
+                    const optionElemen = document.createElement('option');
+                    optionElemen.value = '';
+                    optionElemen.innerHTML = 'Pilih Kelurahan';    
+                    selectKel.appendChild(optionElemen);
+                    if (datas.result === 'success') {
+                        for (let k of datas.data) {
+                            if (k[0] != 'Kelurahan') {
+                                let optionElemen = document.createElement('option');
+                                optionElemen.value = `${k[0]} - ${k[1]}`;
+                                optionElemen.innerHTML = k[0];
+                                selectKel.appendChild(optionElemen);
+                            }
+                        }
+                        divKel.hidden = false;
+                        document.querySelector('.pilihPsr').hidden = false;
+                    }
+                });
+            
+            //const UrlJenisUsaha = "https://script.google.com/macros/s/AKfycbw3LsfGk-leru2hykMXRd60MnG3OcMgCyKVAaHQWW0uv4UKECvcpWT6-rdQOJLsgvAz/exec";
+            
+            const UrlJenisUsaha = "https://script.google.com/macros/s/AKfycbw2Av1MF5w-AQddyKSZxs9qjOTpdD-J4wRlvjGfBMx7PqeGt4Jbf2Xgw8dJlvPBBMoTvQ/exec";
+
+            const selectJenisUsaha = document.getElementById('komoditi');
+
+            fetch(UrlJenisUsaha)
+                .then(datas => datas.json())
+                .then(datas => {
+                    const optionElemen = document.createElement('option');
+                    optionElemen.value = '';
+                    optionElemen.innerHTML = 'Pilih Jenis Usaha';
+                    selectJenisUsaha.appendChild(optionElemen);
+                    if (datas.result === "success") {
+                        for (let k of datas.data) {
+                            let optionElemen = document.createElement('option');
+                            optionElemen.value = k[1];
+                            optionElemen.innerHTML = k[1];
+                            selectJenisUsaha.appendChild(optionElemen);
+                        }
+                    }
+                });
+            
+        </script>
+
+        <script>
+            var init = '';
+            function preventBackPress(popstateRespon) {
+                console.log(`preveBackPress : ${popstateRespon}`);
+                $.mobile.changePage(`#${popstateRespon}`, {allowSamePageTransition : true, role : "dialog"});
+                history.pushState({pageUrl : popstateRespon}, null, '#');
+                init = popstateRespon;
+                return false;
+            }
+
+            window.addEventListener('popstate', e => {
+                if (init === e.state.pageUrl) {
+                    preventBackPress(e.state.pageUrl);
+                } else {
+                    preventBackPress(init);
+                }
+                
+            });
+        </script>
+        
+        <script language="javascript">
+            const ListOfTahunTera = () => {
+                
+                //let URLWebApp = "https://script.google.com/macros/s/AKfycbxsBsrVC-cH4II9aFfMqu3b_FogrohtzBcJiBo2EacfSrKKat9krzLzP-_r7DE3N9zf/exec";
+                
+                const URLWebApp = "https://script.google.com/macros/s/AKfycbwW6aQM6TglXqePLtXVUKDIqO2K5ZXX6ozbEgguf5gErHBLVO8rp53kNyHvkHMfCv_agg/exec";
+				
+                fetch(URLWebApp).then(d => d.json()).then(d => {
+                    //let nowYear = d.data;
+                    let selectId = document.getElementById('tahunTera1');
+                    let optionElemen = document.createElement('option');
+                    optionElemen.value = '';
+                    optionElemen.innerHTML = '';
+                    selectId.appendChild(optionElemen);
+
+                    for (let year of d.data) {
+                        let optionElemen = document.createElement('option');
+                        optionElemen.value = year;
+                        optionElemen.innerHTML = year;
+                        selectId.appendChild(optionElemen);
+                    }
+				});	
+            }
+
+            ListOfTahunTera();
+        </script>
+
+        <script language="javascript">
+            $(function() {
+                let Psr = '';
+                let Koordinat = {};
+                $(".pilihPsr").on('click', function() {
+                    Psr = $("#pilih_psr").children("option:selected").text();
+                    if (Psr === "Pilih Kelurahan") {
+                        $.mobile.changePage("#page4", {allowSamePageTransition : true, role : "dialog"});
+                        $(".msg_container").html(`Anda belum memilih Kelurahan, Silahkan pilih dahulu ...<br><br><a id='kembali'> << Kembali</a>`);
+                        history.pushState({pageUrl : 'page4'}, null, '#');
+                        init = 'page4';
+                        return false;
+                    }
+
+                    localStorage.setItem('pasar', Psr);
+
+                    const urlParam = new URLSearchParams(window.location.search);
+                    urlParam.has('sendMeBack') ? window.open('https://belajarwebdevelopment.github.io/cariKataKunciWilayah.html', '_self') : '';
+
+                    //urlParam.has('sendMeBack') ? window.open('http://localhost/belajarwebdevelopment.github.io/cariKataKunci.html', '_self') : '';
+                    
+                    //urlParam.has('sendMeBack') ? window.open('E:/xampp/htdocs/belajarwebdevelopment.github.io/cariKataKunci.html', '_self') : '';
+
+                    let watcId = navigator.geolocation.watchPosition(position => {
+                        $("#posisi").html('Koordinat : <b>'+position.coords.latitude+','+position.coords.longitude+'</b>');
+
+                        Koordinat = {latitude : position.coords.latitude, longitude : position.coords.longitude};
+                    });
+
+                    $.mobile.changePage("#page2", {allowSamePageTransition : true, role : "dialog"});
+                    history.pushState({pageUrl : 'page2'}, null, '#');
+                    init = 'page2';
+                    $(".jumbo_page2").html(`
+                        <h1 class="display-5 hijauGadung">Halo, Apa Kabar!</h1>
+                        <p class="hijauGadung">Anda sedang berada di Kelurahan <b>`+Psr+`</b>.<p id="posisi"></p>  
+                        <hr class="my-4">
+                        <p class="hijauGadung">Silahkan mengisi data pedagang pasar lalu tekan tombol 'Selanjutnya ...' untuk mengisi UTTP-nya</p>
+                        <p align="right"><a id="gantiPsr">ganti kelurahan</a></p>
+                    `);
+
+                    //Cek apakah inputan nomor HP adalah number
+                    $("#hp").on('keyup', function() {
+                        pola = /[0-9]|-|\s/g;
+                        karakter = $(this).val().charAt($(this).val().length-1);
+                        if (pola.test(karakter) || $(this).val() == '') {
+                            return;
+                        } else {
+                            alert("Maaf, hanya bisa memasukkan angka dan tanda '-'");
+                            $(this).val($(this).val().slice(0,$(this).val().length-1));
+                        }
+                    });
+                });
+				
+				$(".msg_container").on("click", '#kembali', function() {
+                    $.mobile.changePage('#page1', {role : 'dialog'});
+                });
+
+                $(".msg_container").on("click", '#kembali2', function() {
+                    $.mobile.changePage('#page2', {allowSamePageTransition : true, role : 'dialog'});
+                    history.pushState({pageUrl : 'page2'}, null, '#');
+                    init = 'page2';
+                });
+
+                $(".msg_container").on("click", '#kembali3', function() {
+                    $.mobile.changePage('#page2', {allowSamePageTransition : true, role : 'dialog'});
+                    history.pushState({pageUrl : 'page2'}, null, '#');
+                    init = 'page2';
+                });
+
+                $(".jumbo_page3").on("click", '#backToWtu', function() {
+                    $.mobile.changePage('#page2', {allowSamePageTransition : true, role : 'dialog'});
+                    history.pushState({pageUrl : 'page2'}, null, '#');
+                    init = 'page2';
+                });
+
+                $(".msg_container_page6").on("click", '#backToPage3', function() {
+                    $.mobile.changePage('#page3', {allowSamePageTransition : true, role : 'dialog'});
+                    history.pushState({pageUrl : 'page3'}, null, '#');
+                    init = 'page3';
+                });
+
+                $(".next_uttp").on("click", function() {
+                    if ($("#Nama").val() == '' || $("#komoditi").val() == '' || $("#hp").val() == '' || $("#alamat").val() == '') {
+                        $.mobile.changePage('#page4', {allowSamePageTransition : true, role : "dialog"});
+                        history.pushState({pageUrl : 'page4'}, null, '#');
+                        init = 'page4';
+                        $(".msg_container").html(`<p><h4>Maaf, belum bisa ke halaman selanjutnya....</h4><br>Nama wtu, jenis usaha, alamat, atau No. telepon masih ada yg kosong, silahkan diisi dahulu, atau isi dengan tanda '-' jika memang kosong.<br></p><p><a id='kembali2'><< Kembali</a></p>`);
+                        return;
+                    }
+
+                    //const pattern1 = /[`~!@#$%^&*+=\{\}\[\]\(\)\:\;\"\|\<\,\>\.\?\\]/;
+                    //const pattern1 = /[`~!@#$%^&*+=\{\}\[\]\(\)\:\;\"\|\<\,\>\?\\]/;
+                    const pattern1 = /[`~!@#$%^&*+=\{\}\[\]\(\)\:\;\"\|\<\>\?\\]/;
+                    const pattern2 = /[a-z0-9/]/i;
+                    let result1 = pattern1.test(document.getElementById('Nama').value);
+                    let result2 = pattern2.test(document.getElementById('Nama').value);
+                    console.log(result1);
+                    console.log(result2);
+                    if (result1 === true || result2 === false) {
+                        $.mobile.changePage('#page4', {allowSamePageTransition : true, role : "dialog"});
+                        history.pushState({pageUrl : 'page4'}, null, '#');
+                        init = 'page4';
+                        $(".msg_container").html(`<p><h4>Maaf, belum bisa ke halaman selanjutnya....</h4><br>Nama Pedagang/WTU wajib terdiri dari huruf dan/atau angka, spasi, ', -, _ serta tidak boleh hanya spasi saja.<br></p><p><a id='kembali3'><< Kembali</a></p>`);
+                        return;
+                    }
+
+                    setPage3Button();
+                    $.mobile.changePage("#page3", {allowSamePageTransition : true, role : "dialog"});
+                    history.pushState({pageUrl : 'page3'}, null, '#');
+                    init = 'page3';
+					$("#lat").val(Koordinat.latitude.toString().replace(".",","));
+					$("#long").val(Koordinat.longitude.toString().replace(".",","));
+
+                    let kontenStr = `
+                        <table class="kontenTabel">
+                            <tr><td>WTU</td><td>:</td><td><b>${$("#Nama").val()}</b></td></tr>
+                            <tr><td>Jenis Usaha</td><td>:</td><td><b>${$("#komoditi").val()}</b></td></tr>
+                            <tr><td>Alamat</td><td> : </td><td><b>${$("#alamat").val()}</b></td></tr>
+                            <tr><td>Phone/WA</td><td> : </td><td><b>${$("#hp").val()}</b></td></tr>
+                            <tr><td>WTU</td><td> : </td><td><b>${$("#Nama").val()}</b></td></tr>
+                            <tr><td>Latitude</td><td> : </td><td><b>${Koordinat.latitude}</b></td></tr>
+                            <tr><td>Longitude</td><td> : </td><td><b>${Koordinat.longitude}</b></td></tr>
+                        </table>
+                        <hr class="my-4">
+                        <p>Silahkan mengisi data UTTP nya pada form dibawah ini, setelah itu tekan tombol 'Submit'.</p>
+                        <p align="right"><a id="backToWtu" style='color : #00000;'><<< Kembali ke form wtu</a></p>
+                    `; 
+
+                    $(".jumbo_page3").html(kontenStr);
+					$(".to_hide").attr('hidden', true);
+                });
+
+                $(".jumbo_page2").on("click","#gantiPsr", function() {
+                    $("#pendataanForm").trigger('reset');
+                    $.mobile.changePage("#page1", {role : 'dialog'});
+                });
+            });
+        </script>
+
+        <script language="javascript">
+            var setPage3Button = function() {
+                document.querySelector("#entry_the_data").hidden = true;
+                document.querySelector("#pair_the_data").hidden = false;
+            }
+
+            var resetFormDataWTU = function() {
+                $("#hp").val('');
+				$("#los").val('-');
+                $("#alamat").val('');
+                $("#Nama").val('');
+				$("#komoditi").val('').trigger('change');
+            }
+
+            var resetFormAll = function() {
+                $("#pendataanForm").trigger('reset');
+            }
+
+            var setInputForm = function(Index, kap, d, state) {
+                $("#kap"+Index).val(kap).attr('readonly', state);   
+                $("#d"+Index).val(d).attr('readonly', state);   
+                $("#merk"+Index).attr('readonly', state);
+                $("#model"+Index).attr('readonly', state);
+                if (state == true) {
+                    $("#tahunTera"+Index).focus();
+                } else {
+                    $("#kap"+Index).focus();
+                }
+            } 
+
+            var resetFormUTTP_v2 = function(ids) {
+                $("#uttp1").val('').trigger('change');
+                $("#tahunTera1").val('').trigger('change');
+                let arr = ["kap","d","merk","model"]
+                for (i=0;i<arr.length;i++) {
+                    $("#"+arr[i]+ids).val("").attr('readonly', true);
+                }
+                $("#qr_code").val("");
+                $("#sn").val("");
+            }
+
+            var resetFormUTTP = function(id) {
+                let arr = ["kap","d","merk","model"]
+                for (i=0;i<arr.length;i++) {
+                    $("#"+arr[i]+id).val("");
+                }
+                $("#qr_code").val("");
+                $("#sn").val("");
+                $("#tahunTera1").val('').trigger('change');
+            }
+			
+			var ShowhideSomeInput = function(state) {
+				$(".to_hide").attr('hidden', state);
+			}
+			
+            $(function() {
+                /*
+                $(".pilih_uttp").on('change', function() {
+                    let this_Index = $(this)[0].id.charAt($(this)[0].id.length-1);
+                    setInputForm(this_Index,'','',false);
+                    resetFormUTTP(this_Index);
+					ShowhideSomeInput(false);
+                    let theString = $(this).children("option:selected").val().split("-");
+                    if (theString[0].trim() != 'TE' && theString[0].trim() != 'TP' && $(this).children("option:selected").val() != '' && theString[0].trim() != 'N' && theString[0].trim() != 'TS') {
+                        let kap = theString[1].trim();
+                        let d = theString[2].trim();
+                        setInputForm(this_Index,kap,d,true);
+						ShowhideSomeInput(true);
+                    }
+                });
+                */
+
+                $(".pilih_uttp").on('change', function() {
+                    let this_Index = $(this)[0].id.charAt($(this)[0].id.length-1);
+                    setInputForm(this_Index,'','',false);
+                    resetFormUTTP(this_Index);
+					ShowhideSomeInput(false);
+                    let theString = $(this).children("option:selected").val().split("-");
+                    if (theString[0].trim() != 'TE' && theString[0].trim() != 'TP' && $(this).children("option:selected").val() != '') {
+                        let kap = theString[1].trim();
+                        let d = theString[2].trim();
+
+                        if (theString[0].trim() == 'N' || theString[0].trim() == 'TS') {
+                            console.log('neraca dan te');
+                            setInputForm(this_Index,kap,d,false);
+                            ShowhideSomeInput(false);
+                        } else {
+                            console.log('bukan neraca dan te');
+                            setInputForm(this_Index,kap,d,true);
+    						ShowhideSomeInput(true);
+                        }
+    
+                    }
+                });
+
+                $("#pair_the_data").on('click', function() {
+                    if ($("#uttp1 :selected").text() == "" || $("#uttp1 :selected").text() == "Pilih jenis UTTP") {
+						alert("Proses pindai QRCode Tidak Bisa. UTTP belum dipilih. Silahkan pilih UTTP dahulu");
+						return false;
+					}
+				
+                    if ($("#tahunTera1 :selected").text() == "" || $("#tahunTera1 :selected").text() == "Pilih Tahun Tera") {
+						alert("Proses pindai QRCode Tidak Bisa. Tahun tera belum diisi. Silahkan isi terlebih dahulu");
+						return false;
+					}
+                    document.querySelector("#video").style.border = "none";
+                    $.mobile.changePage("#page6", {allowSamePageTransition : true, role : "dialog"});
+                    history.pushState({pageUrl : 'page6'}, null, '#');
+                    init = 'page6';
+                    $(".msg_container_page6").html(`<a id='backToPage3' style='color : #FFFFFF;'><< Kembali</a>`);
+                    siapkanKamera();
+
+                });
+
+                $("#entry_the_data").on('click', function() {
+                    //Aktifkan tanda loading
+                    document.getElementById('entry_the_data').classList.toggle('d-none');
+	    			document.getElementById('loading_data').classList.toggle('d-none');
+                    setTimeout(() => {
+                        siapkanData();
+                    },200);
+
+                });
+
+            });
+        </script>
+		
+		<script language="javascript">
+
+			function sendData(dataObj) {
+                
+                //const webAppUrl = "https://script.google.com/macros/s/AKfycbyilTkbt4Lz8sBZH797gInqwPZn0GdZLT0xghACvAft4ek7eADUO6EFHLeRpwoCUHaC/exec";
+                
+                const webAppUrl = "https://script.google.com/macros/s/AKfycbyA5gFGLNnhQXsJe5T3lQIEkHnyO3ysYAeCxQvzw-GJm0Lx9dkcGm74Gv5n-MfTNSn9MA/exec";
+                
+                
+                const btnKirim = document.getElementById('entry_the_data');
+				const btnLoading = document.getElementById('loading_data');
+				/*btnKirim.classList.toggle('d-none');
+				btnLoading.classList.toggle('d-none');
+                */
+                fetch(webAppUrl,{
+					method : 'POST',
+					body : JSON.stringify(dataObj)
+				}).then(respon => respon.json()).then(respon => {
+					btnKirim.classList.toggle('d-none');
+					btnLoading.classList.toggle('d-none');
+					console.log(respon.result);
+					let pesan = respon['msg'];
+                    console.log(pesan);
+					$.mobile.changePage("#page5", {allowSamePageTransition : true, role:"dialog"});
+                    history.pushState({pageUrl : 'page5'}, null, '#');
+                    init = 'page5';
+
+                    if (respon.result === 'error') {
+                        $(".msg_container_page5").html('<p><div class="errSpan">Warning !!!<br>'+pesan+'</div><br><span style="color : #432616;">Data gagal dimasukkan, Silahkan ulangi pemasukan data : </span><br><br><div class="alert alert-danger add_data" id="add_uttp" role="alert">Input UTTP Pedagang Yg Sama</div><div class="alert alert-warning add_data" id="ganti_pedagang" role="alert">Ganti Pedagang</div><div class="alert alert-info add_data" id="ganti_pasar" role="alert">Ganti Kelurahan</div></p>');
+                    } else {
+                        $(".msg_container_page5").html('<p><span class="spanClass">'+pesan+'</span><br><br><span  class="spanClass">Klik menu di bawah ini utk memasukkan data lagi : </span><br><div class="alert alert-danger add_data" id="add_uttp" role="alert">Input UTTP WTU Yg Sama</div><div class="alert alert-warning add_data" id="ganti_pedagang" role="alert">Ganti WTU</div><div class="alert alert-info add_data" id="ganti_pasar" role="alert">Ganti Kelurahan</div></p>');
+                    }
+
+				});
+			}
+
+            function sandikan(rawTxt) {
+                setMaxDigits(5000);
+                let key = new RSAKeyPair("10001","",
+                "a5261939975948bb7a58dffe5ff54e65f0498f9175f5a09288810b8975871e99af3b5dd94057b0fc07535f5f97444504fa35169d461d0d30cf0192e307727c065168c788771c561a9400fb49175e9e6aa4e23fe11af69e9412dd23b0cb6684c4c2429bce139e848ab26d0829073351f4acd36074eafd036a5eb83359d2a698d3",1024);
+                let ciphertext = encryptedString(key, rawTxt, 'OHDave', RSAAPP.NumericEncoding);
+                return ciphertext;
+            }
+
+			function siapkanData() {
+                const form = document.querySelector('#pendataanForm');
+				const data = new FormData(form);
+				let SerializePair = {};
+                let xyz = {};
+                
+				
+                for (const [name, value] of data) {
+                    switch(name) {
+                        case 'alamat':
+                            xyz[name] = value;
+                        case 'hp':
+                            xyz[name] = value;
+                        case 'lat':
+                            xyz[name] = value;
+                        case 'long':
+                            xyz[name] = value;
+                        default:
+                            SerializePair['xyz'] = sandikan(JSON.stringify(xyz));    
+                            SerializePair[name] = value;
+                    }
+				}
+
+                delete SerializePair.alamat;
+                delete SerializePair.hp;
+                delete SerializePair.long;
+                delete SerializePair.lat;
+
+                console.log(SerializePair);
+                sendData(SerializePair);
+                
+			}
+			
+        </script>
+		
+
+        <script language="javascript">
+            $(function() {
+                $("#page5").on("click", ".add_data", function() {
+                    if ($(this)[0].id == "add_uttp") {
+                        setPage3Button();
+                        $.mobile.changePage("#page3", {role:"dialog"});
+                        resetFormUTTP_v2(1);
+						ShowhideSomeInput(true);
+                        return;
+                    }
+                    if ($(this)[0].id == "ganti_pedagang") {
+                        $.mobile.changePage("#page2", {role:"dialog"});
+                        resetFormDataWTU();
+                        resetFormUTTP_v2(1);
+                        return;
+                    }
+                    if ($(this)[0].id == "ganti_pasar") {
+                        $.mobile.changePage("#page1", {role:"dialog"});
+                        resetFormAll();
+                        return;
+                    }
+                });
+            });
+        </script>
+
+        <script language="javascript" async>
+            function siapkanKamera() {
+                const video = document.querySelector("#video");
+                //Check if device has camera
+                if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                    const constrain = {
+                        video : {
+                            facingMode : {
+                                exact: 'environment'
+                            }
+                        },
+                        audio : false   
+                    }
+                    //start video stream
+                    navigator.mediaDevices.getUserMedia(constrain).then(stream => {
+                        video.srcObject = stream;
+                    });
+
+                    //const container_hasil = document.querySelector('#qrcode_str');
+
+                    //Mendklarasi class barcode detector
+                    const qrcodeDetector = new BarcodeDetector({ formats : ['qr_code'] });
+
+                    const deteksiKode = () => {
+                        //Mulai mendeteksi qrcode
+						
+                        qrcodeDetector.detect(video).then(codes => {
+                            
+                            if (codes.length === 0) return;
+                            
+                            for (const qrcode of codes) {
+                                $.mobile.changePage("#page3", {role : "dialog"});
+                                document.querySelector("#video").style.border = "5px solid green";
+                                document.querySelector('#qr_code').value = "";
+                                document.querySelector('#qr_code').value = qrcode.rawValue;
+                                document.querySelector('#entry_the_data').hidden = false;
+                                document.querySelector('#pair_the_data').hidden = true;
+                            }
+
+                            clearInterval(setIntervalID);
+
+                        })
+                        .catch(err => {
+                            $.mobile.changePage("#page3", {role : "dialog"});
+                            document.querySelector("#video").style.border = "5px solid red";
+                            document.querySelector('#qr_code').value = "";
+                            document.querySelector('#qr_code').value = "Maaf, Pembacaan gagal. Ulangi proses scan";
+                            document.querySelector('#entry_the_data').hidden = true;
+                            document.querySelector('#pair_the_data').hidden = false;
+                            clearInterval(setIntervalID);
+                        });
+                    }
+                    
+                    var setIntervalID = setInterval(deteksiKode, 1000);
+                }
+            }
+
+            let menuUtamaLnk = document.querySelector('.menuUtama');
+            let cariByKatakunciLnk = document.querySelector('.cariByKatakunci');
+            let scanTandaiTera = document.querySelector('.scanTandaiTera');
+
+            menuUtamaLnk.addEventListener('click', () => window.location = "https://belajarwebdevelopment.github.io/index.html");
+
+            cariByKatakunciLnk.addEventListener('click', () => window.location = "https://belajarwebdevelopment.github.io/cariKataKunciWilayah.html");
+
+            scanTandaiTera.addEventListener('click', () => window.location = "https://belajarwebdevelopment.github.io/scanner_wilayah.html")
+        </script>        
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Menu Utama Aplikasi Pendataan">
+    <meta name="description" content="Aplikasi Pendataan UTTP di Kota Surakarta">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Smooch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Roboto&family=Smooch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <div class="kontainerBrown">
+        <span>Menu Utama</span>
+        <p>Aplikasi pendataan UTTP di Pasar Tradisional dan Wilayah. Silahkan pilih menu di bawah ini</p>
+            <div class="menuPendataan">
+                <a href="index2.html"><img src="registration.jfif" alt="..."></a><br>
+                <span class="menuText">Pendataan UTTP<br>Pasar</span>
+            </div>
+            <div class="menuPendataan2">
+                <a href="wilayah.html"><img src="registration2.jpg" alt="..."></a><br>
+                <span class="menuText">Pendataan UTTP<br>Wilayah</span>
+            </div>
+
+            <div class="menuScanning">                
+                <a href="scanner.html"><img src="scanning.jpg" alt="Scan dan Tandai Tera"></a><br>
+                <span class="menuText">Scan & Tandai Tera<br>Pasar</span>
+            </div>
+            <div class="menuScanning2">                
+                <a href="scanner_wilayah.html"><img src="scanning2.jpg" alt="Scan dan Tandai Tera"></a><br>
+                <span class="menuText">Scan & Tandai Tera<br>Wilayah</span>
+            </div>
+            <div class="menuPencarian1"><span class="menuText2"><a href="cariKataKunci.html">Pencarian Dgn Katakunci (Pasar)</a></span></div>
+            <div class="menuPencarian2"><span class="menuText2"><a href="cariKataKunciWilayah.html">Pencarian Dgn Katakunci (Wilayah)</a></span></div>
+            <div class="menuPencarian4"><span class="menuText2"><a href="dashboard.html">Dashboard</a></span></div>
+            <div class="menuPencarian5"><span class="menuText2"><a href="unidentified.html">Rekap Unidentified UTTP</a></span></div>
+            <div class="menuPencarian3"><span class="menuText2"><a href="bkd.html">Aplikasi Hitung BKD</a></span></div>
+    </div>
+    <script>
+        window.addEventListener('popstate', e => {
+            window.history.forward();
+            console.log(e);
+            return false;
+        });
+    </script>
+</body>
+</html>
