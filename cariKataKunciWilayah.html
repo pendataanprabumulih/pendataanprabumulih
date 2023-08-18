@@ -136,9 +136,10 @@
 
                 //const urlWebApp = "https://script.google.com/macros/s/AKfycbzJvgIIYQeMatqPKe4MWlzYJA7uN0Z8RYZ_47Du294ZkE5M_M4fn0OUdC0g9xdnGytyVw/exec";
 
-                const urlWebApp = "https://script.google.com/macros/s/AKfycbzJvgIIYQeMatqPKe4MWlzYJA7uN0Z8RYZ_47Du294ZkE5M_M4fn0OUdC0g9xdnGytyVw/exec";
+                //const urlWebApp = "https://script.google.com/macros/s/AKfycbzJvgIIYQeMatqPKe4MWlzYJA7uN0Z8RYZ_47Du294ZkE5M_M4fn0OUdC0g9xdnGytyVw/exec";
                 
-
+                const urlWebApp = "https://script.google.com/macros/s/AKfycbzvIBW36lUlwGi27gl73gMXOce9jWgPPBion9qaGVaCy62frXqEp44FztaArS7vF5A1/exec";
+                
                 const formdata = document.querySelectorAll('#editWtuForm input');
                 const barisKe = document.querySelector('.confirmBtn').id.split("-")[1];
                 let theData = Array.from(formdata).reduce((acc, input) => ({...acc,[input.id]: input.value}),{});
@@ -270,7 +271,7 @@
  
                 //const webAppUrl = "https://script.google.com/macros/s/AKfycbwZO3kmY6ik5z7dUaguIaDjGvUONBq-PxywBLuqu8L1WuDmin-bK_sZ6IodEIUiYxDerQ/exec";
                 
-                const webAppUrl = "https://script.google.com/macros/s/AKfycbzvtX-cLl4PDEZqyDrSYjRBImzqMsF4jN0qdAsxRObnr2m2q_zNenDOdLqR_GoxNZQF/exec";
+                const webAppUrl = "https://script.google.com/macros/s/AKfycbxsBl-eLkezaTva96M4WXdHZ8d_BxWtLi8VIpZrtmUDryWnWrr_1JSG5eDaTZsrCLxz/exec";
 
                 let h = new Headers();
                 h.set('Content-Type','text/plain;charset=UTF-8');
@@ -368,7 +369,7 @@
             function sendUpdateTera(nomorBaris) {
                 //const webAppUrl2 = "https://script.google.com/macros/s/AKfycbzpiRm3YeKl_m2ERYZBHY8X0YNDq-MaJw4flYtcBaUxFijLTQRAgPayc4-OTMawbjdNSg/exec";
 
-                const webAppUrl2 = "https://script.google.com/macros/s/AKfycbzCFIhYAmtGJoXUmXrYLgwmAWbKzK1jDfSTWqmTdHPUgn3M1oVCwsNjfnVfVE8pt-0h/exec";
+                const webAppUrl2 = "https://script.google.com/macros/s/AKfycbw428ikzKuaQhm-_mQD2TY9eImobq-lCOYpzyh2Wbw4m8LD7lUmAGkJ5LvZE8MktdFK/exec";
 
                 return fetch(webAppUrl2, {
                     method : 'POST',
