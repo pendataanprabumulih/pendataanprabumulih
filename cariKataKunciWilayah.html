@@ -139,7 +139,7 @@
                 //const urlWebApp = "https://script.google.com/macros/s/AKfycbzJvgIIYQeMatqPKe4MWlzYJA7uN0Z8RYZ_47Du294ZkE5M_M4fn0OUdC0g9xdnGytyVw/exec";
                 
                 const urlWebApp = "https://script.google.com/macros/s/AKfycbzvIBW36lUlwGi27gl73gMXOce9jWgPPBion9qaGVaCy62frXqEp44FztaArS7vF5A1/exec";
-                
+
                 const formdata = document.querySelectorAll('#editWtuForm input');
                 const barisKe = document.querySelector('.confirmBtn').id.split("-")[1];
                 let theData = Array.from(formdata).reduce((acc, input) => ({...acc,[input.id]: input.value}),{});
@@ -384,7 +384,7 @@
             function sendNewQRCode(nomorBaris, newQRCode) {
                 //const webAppUrl3 = "https://script.google.com/macros/s/AKfycbzddrxJyUc3o0rIeNIP9nYMvrpziXF7L0XyAeqaJcEtFxntridJxwvKK_WDV55eSEhmKQ/exec";
 
-                const webAppUrl3 = "https://script.google.com/macros/s/AKfycbzPq_j03louEczmHzSwAQfn-SB7z5PoS4RiBok1S0zBj2_Ii99lLB6zMMIABhZ_4QKV/exec";
+                const webAppUrl3 = "https://script.google.com/macros/s/AKfycbw-Pr1Nw6HUWJLnXAEE5TwMyH1YDYS03DBqpgpSR30b1wawnhOr09RYGd8lq78Z1nu0/exec";
                 
                 return fetch(webAppUrl3, {
                     method : 'POST',
