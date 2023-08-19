@@ -1,7 +1,7 @@
 async function getUttp() {
     
-    const url = "https://script.google.com/macros/s/AKfycbz_Je2ZXuIRFmxWdYpQTbgWbEa4iqU9ucJj1FrPK8hoql-UtKnFbBj-upEFOvWU7ZYH/exec";
-    
+    //const url = "https://script.google.com/macros/s/AKfycbz_Je2ZXuIRFmxWdYpQTbgWbEa4iqU9ucJj1FrPK8hoql-UtKnFbBj-upEFOvWU7ZYH/exec";
+    const url = "https://script.google.com/macros/s/AKfycbyet4T-jplWnj5PFuP43UWTOotq4acR_d1zLWcc__ENcPzMbFlqFr_D2yOi1ucmX_cDhA/exec";
     
     await fetch(url)
     .then(data => data.json())
@@ -39,7 +39,7 @@ async function getPasar() {
         
         let temporary = [];
         if (data.result === "success") {
-            console.log(data);
+            //console.log(data);
             data.data.forEach(e => {
                 temporary.push(e[0]);
             });
@@ -63,15 +63,15 @@ async function getPasar() {
 
 async function getWilayah() {
     
-    const url = "https://script.google.com/macros/s/AKfycbxxWf-43TUg5XvBOes_r89pANhi6fCOQgqhF_SwEmjJMWSIvv9BSDEsX2ZCpUGQDMRg/exec";
-    
+    //const url = "https://script.google.com/macros/s/AKfycbxxWf-43TUg5XvBOes_r89pANhi6fCOQgqhF_SwEmjJMWSIvv9BSDEsX2ZCpUGQDMRg/exec";
+    const url = "https://script.google.com/macros/s/AKfycbx8st8IDg2R0TO01wNE8mUIeFE6uEUGbb7IUpPxHO_df5O0jjRH0rZENIcaQ7Tj68pT/exec";
     await fetch(url)
     .then(data => data.json())
     .then(data => {
         
         let temporary = [];
         if (data.result === "success") {
-            console.log(data);
+            //console.log(data);
             data.data.forEach(e => {
                 temporary.push(e[0]);
             });
@@ -142,8 +142,8 @@ async function inputDataWly(uttp = "", wilayah = "", jml = "", container) {
         return false;
     }
 
-    const url = "https://script.google.com/macros/s/AKfycbyv8p_Exa1aWIrHSnHCIueqFTEvLDBWchA2HLjp7GrRibnPYbj2RwXN3gcTlQdNgpabOA/exec";
-
+    //const url = "https://script.google.com/macros/s/AKfycbyv8p_Exa1aWIrHSnHCIueqFTEvLDBWchA2HLjp7GrRibnPYbj2RwXN3gcTlQdNgpabOA/exec";
+    const url = "https://script.google.com/macros/s/AKfycbybfvDrnRWQI3EsqEvbYaAeLjnDcl6Kz2bEpxClGBd-xQJX7bWiBhT_vHkQnObuoygw/exec";
     let wly = wilayah.split(" ")[1];
 
     await fetch(url, {
