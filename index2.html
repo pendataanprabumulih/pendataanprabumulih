@@ -27,7 +27,7 @@
         <form id="pendataanForm">
             
         <div class="container py-2 my-5 border" data-role="page" id="page1">
-            <div class="row mx-1 gx-5 mb-3 justify-content-center py-1 px-2" style="background-color: #4682BF;">
+            <div class="row mx-1 gx-5 mb-3 justify-content-center py-1 px-2" style="background-color: #1aa2d9;">
                 <h4 style="color:#FFFFFF;">PILIH PASAR</h4>
             </div>
             <div class="row mx-1 gx-5 mb-3">
@@ -46,7 +46,7 @@
         <div class="container py-5 my-5 border" data-role="page" id="page2">
             <div class="jumbotron jumbo_page2">
             </div>
-            <div class="row my-4 mx-4 gx-5 mb-3 py-2 px-2" style="background-color: #4682BF;">
+            <div class="row my-4 mx-4 gx-5 mb-3 py-2 px-2" style="background-color: #1aa2d9;">
                 <h4 style="color:#FFFFFF;">DATA PEDAGANG/WTU</h4>
             </div>
             <div class="row mx-1 gx-5 mb-3">
@@ -85,7 +85,7 @@
             <div class="row mx-1 gx-5 mb-3">
                 <div class="col-md-6 py-2">
                     <div class="mr-1 px-2 py-2 border">
-                        <div class="mb-3 px-2 py-2 bg-primary">
+                        <div class="mb-3 px-2 py-2 bg-primary uttpPart">
                             <h4 style="color : #FFFFFF;">UTTP 1</h4>
                         </div>
         
@@ -169,15 +169,13 @@
             .then(datas => datas.json())
             .then(datas => {
                 const optionElemen = document.createElement('option');
-                //optionElemen.value = '';
-                //optionElemen.innerHTML = 'Pilih jenis UTTP';
+
                 selectKel.appendChild(optionElemen);
                 if (datas.result === 'success') {
                     for (let k of datas.data) {
                         if (k[0] != 'Daftar Pasar') {
                             let optionElemen = document.createElement('option');
-                            //optionElemen.value = `${k[0]} - ${k[1]} - ${k[2]}`;
-                            //k[1] === '-'? optionElemen.innerHTML = k[0] : optionElemen.innerHTML = `${k[0]} - ${k[1]}`;
+
                             optionElemen.innerHTML = k[0];
                             selectPasar.appendChild(optionElemen);
                         }
