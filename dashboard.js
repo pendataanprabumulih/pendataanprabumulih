@@ -1,6 +1,6 @@
 async function getWilayah() {
-    const UrlKelurahan = "https://script.google.com/macros/s/AKfycbxxWf-43TUg5XvBOes_r89pANhi6fCOQgqhF_SwEmjJMWSIvv9BSDEsX2ZCpUGQDMRg/exec";
-
+    //const UrlKelurahan = "https://script.google.com/macros/s/AKfycbxxWf-43TUg5XvBOes_r89pANhi6fCOQgqhF_SwEmjJMWSIvv9BSDEsX2ZCpUGQDMRg/exec";
+    const UrlKelurahan = "https://script.google.com/macros/s/AKfycbx8st8IDg2R0TO01wNE8mUIeFE6uEUGbb7IUpPxHO_df5O0jjRH0rZENIcaQ7Tj68pT/exec";
     let str = '';
     await fetch(UrlKelurahan)
         .then(datas => datas.json())
@@ -10,6 +10,7 @@ async function getWilayah() {
             optionElemen.innerHTML = '---Pilih Kelurahan---';    
             str += optionElemen.outerHTML;
             if (datas.result === 'success') {
+                console.log(datas);
                 for (let k of datas.data) {
                     if (k[0] != 'Kelurahan') {
                         let optionElemen = document.createElement('option');
@@ -114,7 +115,8 @@ async function getTotalStatUnidentifiedPerPasar(namaPasar) {
 
 async function getTotalStatUnidentifiedWilayah() {
     let a = {};
-    const apiUrl = "https://script.google.com/macros/s/AKfycbyk4FzSpH-9uMFNfPXMmIm33uMDvkuCQZ2XO7O84iJe9Sm4D22_IvoP8iKsJMLTHZoq/exec";
+    //const apiUrl = "https://script.google.com/macros/s/AKfycbyk4FzSpH-9uMFNfPXMmIm33uMDvkuCQZ2XO7O84iJe9Sm4D22_IvoP8iKsJMLTHZoq/exec";
+    const apiUrl = "https://script.google.com/macros/s/AKfycbzMuNocqESidIIKz00yJ46baZm5xWbJBF2Odg5BfHIby8Wu6r42N6MDzOUSk8dYz9er/exec";
     await fetch(apiUrl, {
         method : 'GET'
     })
@@ -127,8 +129,8 @@ async function getTotalStatUnidentifiedWilayah() {
 }
 
 async function getTotalStatUnidentifiedPerWilayah(namaWly) {
-    const apiUrl = "https://script.google.com/macros/s/AKfycbwM6T8mXxqs9yiOPWRYQVOaDsRiodmzph8UPT0RHzH4KODVg2RPClI_OiX2uMzQ7JpjyQ/exec";
-
+    //const apiUrl = "https://script.google.com/macros/s/AKfycbwM6T8mXxqs9yiOPWRYQVOaDsRiodmzph8UPT0RHzH4KODVg2RPClI_OiX2uMzQ7JpjyQ/exec";
+    const apiUrl = "https://script.google.com/macros/s/AKfycbyU_tvI6tHRVWsuxCBWFbRjM33ejOwLyf4KwQ3Lno8M6uqdxO9utvMful2zL429ajTE/exec";
     let b = {};
     await fetch(apiUrl, {
         method : 'POST',
@@ -175,8 +177,8 @@ async function getTotalStatPerPasar(namaPasar, sortByPersen = false) {
 async function getTotalStatPerWilayah(namaWilayah, sortByPersen = false) {
 
     //const apiUrl = "https://script.google.com/macros/s/AKfycbwdd-DptsVsoqSUPhbMpZKFS1rY_E-Dh6ZmDwoQp01SjBekk7I92DUhMfHJ9WZhtAE/exec";
-    const apiUrl = "https://script.google.com/macros/s/AKfycbwA415JdFA8WE105eioF5hRzbZiHml4wACon32sx7QucDG3o8xT6ykID2B3yLM1DeYPTA/exec";
-    
+    //const apiUrl = "https://script.google.com/macros/s/AKfycbwA415JdFA8WE105eioF5hRzbZiHml4wACon32sx7QucDG3o8xT6ykID2B3yLM1DeYPTA/exec";
+    const apiUrl = "https://script.google.com/macros/s/AKfycbx1Dc55dWFXwing38SDDGcvYEW8K0IiBWSAhkx_TZkjQRLLmKbfq0EzEkgJCwIQCrTo/exec";
     let a = {};
     let sortedBlmTera = [];
     await fetch(apiUrl, {
@@ -275,8 +277,8 @@ async function showinformation(kontainer, srcData, kelasTbl1='firstTable', kelas
     
     let dataTotalUnWilayah = await getTotalStatUnidentifiedWilayah();
     console.log(dataTotalUnWilayah);
-    let dataTotalWilayah = await getTotalStat("https://script.google.com/macros/s/AKfycbwFc9WnhE6vBcyStokY4Z3gdmsSir1qGggQ-xKS2jnKdOf4xfyLnwJRZBIciJKMI-IB1A/exec");
-    
+    //let dataTotalWilayah = await getTotalStat("https://script.google.com/macros/s/AKfycbwFc9WnhE6vBcyStokY4Z3gdmsSir1qGggQ-xKS2jnKdOf4xfyLnwJRZBIciJKMI-IB1A/exec");
+    let dataTotalWilayah = await getTotalStat("https://script.google.com/macros/s/AKfycbzBrA8l1DQAjhnOMcsK7UadzRGN3NpipU6bidD_votcrWM-k93Yc0SCV7Ta6tD3ajmO/exec");
     
     loadingTotWly.hidden = true;
     let wilayahDiv = document.getElementsByClassName('sumChild')[1];

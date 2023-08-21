@@ -1,5 +1,6 @@
 async function getWilayah() {
-    const UrlKelurahan = "https://script.google.com/macros/s/AKfycbxxWf-43TUg5XvBOes_r89pANhi6fCOQgqhF_SwEmjJMWSIvv9BSDEsX2ZCpUGQDMRg/exec";
+    //const UrlKelurahan = "https://script.google.com/macros/s/AKfycbxxWf-43TUg5XvBOes_r89pANhi6fCOQgqhF_SwEmjJMWSIvv9BSDEsX2ZCpUGQDMRg/exec";
+    const UrlKelurahan = "https://script.google.com/macros/s/AKfycbx8st8IDg2R0TO01wNE8mUIeFE6uEUGbb7IUpPxHO_df5O0jjRH0rZENIcaQ7Tj68pT/exec";
 
     let str = '';
     await fetch(UrlKelurahan)
@@ -104,7 +105,8 @@ async function getTotalStatUnidentified() {
 
 async function getTotalStatUnidentifiedWly() {
     let a = {};
-    const apiUrl = "https://script.google.com/macros/s/AKfycbwp76W1qYETlb3MKfHmckZlJUc_1QULHBi10WuJYbbcS4P8Q9nw6ytQHgj4Vp-8nxB0TQ/exec";
+    //const apiUrl = "https://script.google.com/macros/s/AKfycbwp76W1qYETlb3MKfHmckZlJUc_1QULHBi10WuJYbbcS4P8Q9nw6ytQHgj4Vp-8nxB0TQ/exec";
+    const apiUrl = "https://script.google.com/macros/s/AKfycbw2Nj3yPMON4Y95Y6D2jPNGnE5YNuX3diO-tptycODNys9rn7kjbLo5OIEQISu1C6BL/exec";
     
     await fetch(apiUrl, {
         method : 'POST',
@@ -119,7 +121,8 @@ async function getTotalStatUnidentifiedWly() {
 }
 
 async function getTotalStatUnidentifiedPerWilayah(namaWilayah) {
-    const apiUrl = "https://script.google.com/macros/s/AKfycbwp76W1qYETlb3MKfHmckZlJUc_1QULHBi10WuJYbbcS4P8Q9nw6ytQHgj4Vp-8nxB0TQ/exec";
+    //const apiUrl = "https://script.google.com/macros/s/AKfycbwp76W1qYETlb3MKfHmckZlJUc_1QULHBi10WuJYbbcS4P8Q9nw6ytQHgj4Vp-8nxB0TQ/exec";
+    const apiUrl = "https://script.google.com/macros/s/AKfycbw2Nj3yPMON4Y95Y6D2jPNGnE5YNuX3diO-tptycODNys9rn7kjbLo5OIEQISu1C6BL/exec";
 
     let b = {};
     await fetch(apiUrl, {
@@ -189,7 +192,9 @@ async function getTotalStatPerWilayah(namaWilayah, sortByPersen = false) {
 
     //const apiUrl = "https://script.google.com/macros/s/AKfycbwdd-DptsVsoqSUPhbMpZKFS1rY_E-Dh6ZmDwoQp01SjBekk7I92DUhMfHJ9WZhtAE/exec";
     //const apiUrl = "https://script.google.com/macros/s/AKfycbzEr9pJLiMW6-SyI-lcsWZ3q6VK3KgBB-3v-GdNz3SSqIuw2QSFu97QsStZLuhtDoLE/exec";
-    const apiUrl = "https://script.google.com/macros/s/AKfycbx4L_SopgUGZll686pE491AQHfp0ICUyC13-wVHL57FkSEYs-GJ7y1Gn_lxUkwEvyBTfg/exec";
+    //const apiUrl = "https://script.google.com/macros/s/AKfycbx4L_SopgUGZll686pE491AQHfp0ICUyC13-wVHL57FkSEYs-GJ7y1Gn_lxUkwEvyBTfg/exec";
+
+    const apiUrl = "https://script.google.com/macros/s/AKfycbyRETGKNXloTwl7o-XoN6dPrExa_B0n3fEbaoLKi2Yfaq6CBxNtrPqLW3EQFyN6yWID/exec";
     
     let a = {};
     let sortedBlmTera = [];
@@ -294,7 +299,10 @@ async function showinformation(kontainer, srcData, kelasTbl1='firstTable', kelas
     
     let dataTotalUnWly = await getTotalStatUnidentifiedWly();
 
-    let dataTotalWilayah = await getTotalStat("https://script.google.com/macros/s/AKfycbx4L_SopgUGZll686pE491AQHfp0ICUyC13-wVHL57FkSEYs-GJ7y1Gn_lxUkwEvyBTfg/exec");
+    //let dataTotalWilayah = await getTotalStat("https://script.google.com/macros/s/AKfycbx4L_SopgUGZll686pE491AQHfp0ICUyC13-wVHL57FkSEYs-GJ7y1Gn_lxUkwEvyBTfg/exec");
+    let dataTotalWilayah = await getTotalStat("https://script.google.com/macros/s/AKfycbyRETGKNXloTwl7o-XoN6dPrExa_B0n3fEbaoLKi2Yfaq6CBxNtrPqLW3EQFyN6yWID/exec");
+
+    
 
     loadingTotWly.hidden = true;
     let wilayahDiv = document.getElementsByClassName('sumChild')[1];
