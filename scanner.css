@@ -42,7 +42,7 @@
 }
 
 .tHead {
-    background-color: #7f3e98;
+    background-color: #8694bb;
     color : #FFFFFF;
     font-family : Tahoma;
 }
@@ -50,13 +50,13 @@
 .tBody {
     background-color: #FFFFF5;
     font-family : Tahoma;
-    color : #7f3e98;
+    color : #8694bb;
 }
 
 td {
-	border-left : 1px solid #7f3e98; 
-    border-right : 1px solid #7f3e98;
-    border-bottom : 1px solid #7f3e98;
+	border-left : 1px solid #8694bb; 
+    border-right : 1px solid #8694bb;
+    border-bottom : 1px solid #8694bb;
     padding : 4px 4px 4px 4px;
 }
 
