@@ -60,6 +60,14 @@ td {
     padding : 4px 4px 4px 4px;
 }
 
+.backToSearch {
+    color: #F85F41;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    left : auto;
+    right : 0;
+}
+
 .tombolDiv {
 	/*border-width: 4px;
     border-color: #7f3e98;
