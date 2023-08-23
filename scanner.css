@@ -130,7 +130,7 @@ p.keterangan {
 }
 
 p.keterangan a {
-    color:#0d98ba ;
+    color:#607d8b ;
     font-weight: 800;
 
 }
@@ -280,30 +280,30 @@ p.ungu {
 }
 
 .kontainer {
-    border: 2px solid #52B2BF;
-    color : #2196F3;
+    border: 2px solid #607d8b;
+    color : #47abcc;
     padding-bottom: 10px;
     padding-left: 3px;
     padding-right: 3px;
     padding-top: 3px;
     overflow: hidden;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 #keterangan {
-    background-color: #52B2BF;
-    color : #f5e9de;
+    background-color: #607d8b;
+    color : #ffffff;
     text-align: left;
     font-size :small;
     padding-left: 40px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 #keterangan2 {
-    background-color: #52B2BF;
-    /*color : #f5e9de;*/
+    background-color: #607d8b;
     color : #FFFFFF;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
 }
 
 #katakunci {
