@@ -31,8 +31,8 @@ async function getUttp() {
 
 async function getPasar() {
     
-    const url = "https://script.google.com/macros/s/AKfycbwzVP84YKO62g10ShP-DKAqmOieh8VMJv_8L1FG6ZldOUNPnNFTTZgEKid6d8B6Dx6n/exec";
-    
+    //const url = "https://script.google.com/macros/s/AKfycbwzVP84YKO62g10ShP-DKAqmOieh8VMJv_8L1FG6ZldOUNPnNFTTZgEKid6d8B6Dx6n/exec";
+    const url = "https://script.google.com/macros/s/AKfycbzv_8utcg5VfNXsg0ggXOGrYwVaT1WgbKMwKjMw4rGMF2WBT7IjYlVimu87bQ8sFoI_XA/exec";
     await fetch(url)
     .then(data => data.json())
     .then(data => {
@@ -117,7 +117,9 @@ async function inputData(uttp = "", pasar = "", jml = "", container) {
         return false;
     }
 
-    const url = "https://script.google.com/macros/s/AKfycbzScXcAfbHkfIzEnBMyuFP6bqXc0UfYtKx7PWTH40tNat_NyaqlJdycWagSxpng6Z4B/exec";
+    //const url = "https://script.google.com/macros/s/AKfycbzScXcAfbHkfIzEnBMyuFP6bqXc0UfYtKx7PWTH40tNat_NyaqlJdycWagSxpng6Z4B/exec";
+
+    const url = "https://script.google.com/macros/s/AKfycbyQIVpRk6dtRBOBe5HKvxbggzyUWyXlkQYaYKynjX8_aRc5g7AmPSz-x2BaZ8qEMENegg/exec";
 
     await fetch(url, {
         method : 'POST',

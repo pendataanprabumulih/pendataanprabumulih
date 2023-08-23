@@ -26,7 +26,9 @@ async function getWilayah() {
 }
 
 async function getPasar() {
-    const urlDataPasar = "https://script.google.com/macros/s/AKfycbwzVP84YKO62g10ShP-DKAqmOieh8VMJv_8L1FG6ZldOUNPnNFTTZgEKid6d8B6Dx6n/exec";
+    //const urlDataPasar = "https://script.google.com/macros/s/AKfycbwzVP84YKO62g10ShP-DKAqmOieh8VMJv_8L1FG6ZldOUNPnNFTTZgEKid6d8B6Dx6n/exec";
+
+    const urlDataPasar = "https://script.google.com/macros/s/AKfycbzv_8utcg5VfNXsg0ggXOGrYwVaT1WgbKMwKjMw4rGMF2WBT7IjYlVimu87bQ8sFoI_XA/exec";
 
     let str = '';
     await fetch(urlDataPasar)
@@ -85,7 +87,11 @@ async function getTotalStat(apiUrl, sortByPersen = false) {
 
 async function getTotalStatUnidentified() {
     let a = {};
-    const apiUrl = "https://script.google.com/macros/s/AKfycbwlUaHq5TV3aomPLctIoH6snjIhT8l7wDv1h2GtA5_by4GrnzNwY5pirFTwnSX1vtsu/exec";
+    //const apiUrl = "https://script.google.com/macros/s/AKfycbwlUaHq5TV3aomPLctIoH6snjIhT8l7wDv1h2GtA5_by4GrnzNwY5pirFTwnSX1vtsu/exec";
+
+    const apiUrl = "https://script.google.com/macros/s/AKfycbwrvoyKFlsYTD2wQqIYpidBoDOjb286n3wnETWJqyuAkfH7wZ7jj004ijJL7RMGcGOAIA/exec";
+
+
     await fetch(apiUrl, {
         method : 'GET'
     })
@@ -98,8 +104,10 @@ async function getTotalStatUnidentified() {
 }
 
 async function getTotalStatUnidentifiedPerPasar(namaPasar) {
-    const apiUrl = "https://script.google.com/macros/s/AKfycbyEFbfL6UkXFAle2SbJ0ydbf7zg1N-WKSF8zs8igQJXwaXhoVT7k8fbo19xRPU3W1qi/exec";
+    //const apiUrl = "https://script.google.com/macros/s/AKfycbyEFbfL6UkXFAle2SbJ0ydbf7zg1N-WKSF8zs8igQJXwaXhoVT7k8fbo19xRPU3W1qi/exec";
 
+    const apiUrl = "https://script.google.com/macros/s/AKfycbw4CUw_T8ViyNrOd2l9HzqKBrdVzGQjfX32jbn4OrZY4NsL9Ikh0tKuKtST-7DVw5xmXg/exec";
+    
     let b = {};
     await fetch(apiUrl, {
         method : 'POST',
@@ -146,7 +154,9 @@ async function getTotalStatUnidentifiedPerWilayah(namaWly) {
 
 async function getTotalStatPerPasar(namaPasar, sortByPersen = false) {
 
-    const apiUrl = "https://script.google.com/macros/s/AKfycbyFL2mlam8gBdWGGyMjJH8PKoz0-lHZgGtOEWZK7E8rpFX2nQWWA-YPNkqzlCrC8mNS/exec";
+    //const apiUrl = "https://script.google.com/macros/s/AKfycbyFL2mlam8gBdWGGyMjJH8PKoz0-lHZgGtOEWZK7E8rpFX2nQWWA-YPNkqzlCrC8mNS/exec";
+
+    const apiUrl = "https://script.google.com/macros/s/AKfycbw80b1PEJT0uXqYL9W0gm-ETMf73-DN9rcuy8FXP2N_npAWQGeaBqe9fdFuBsmF671nxQ/exec";
     
     let a = {};
     let sortedBlmTera = [];
@@ -266,7 +276,10 @@ async function showinformation(kontainer, srcData, kelasTbl1='firstTable', kelas
     
     let dataTotalUn = await getTotalStatUnidentified();
     //console.log(dataTotalUn);
-    let dataTotal = await getTotalStat("https://script.google.com/macros/s/AKfycbzgTJb8Uvva00j2KNLDFGTHtdRAVK__b52rWC5f9AIaeoMgmAdR-UZ7wBaOaNRgI-CW/exec");
+    //let dataTotal = await getTotalStat("https://script.google.com/macros/s/AKfycbzgTJb8Uvva00j2KNLDFGTHtdRAVK__b52rWC5f9AIaeoMgmAdR-UZ7wBaOaNRgI-CW/exec");
+    
+    let dataTotal = await getTotalStat("https://script.google.com/macros/s/AKfycbxZxXy046dLi4d-COFHUZxm9ULrPEQKpuoENkSh_2QpQnnxBc-LQT2w4Pvee7MxVIU83A/exec");
+
     loadingTotPsr.hidden = true;
     let pasarDiv = document.getElementsByClassName('sumChild')[0];
     dataTotalUn.result === "error" ? showinformation(pasarDiv, dataTotal, 'firstTable', 'secondTable') : showinformation(pasarDiv, dataTotal, 'firstTable', 'secondTable', dataTotalUn);
@@ -343,21 +356,7 @@ async function showinformation(kontainer, srcData, kelasTbl1='firstTable', kelas
 
         });
     });
-/*
-    document.querySelectorAll('.gb').forEach(item => {
-        item.addEventListener('click', async () => {
-            let loadingTotPsr = document.querySelector('.ld1');
-            loadingTotPsr.hidden = false;
-            
-            let dataTotal = await getTotalStat("https://script.google.com/macros/s/AKfycbzgTJb8Uvva00j2KNLDFGTHtdRAVK__b52rWC5f9AIaeoMgmAdR-UZ7wBaOaNRgI-CW/exec", true);
-            loadingTotPsr.hidden = true;
-            let pasarDiv = document.getElementsByClassName('sumChild')[0];
-            pasarDiv.removeChild(pasarDiv.children[2]);
-            pasarDiv.removeChild(pasarDiv.children[2]);
-            showinformation(pasarDiv, dataTotal);
-        });
-    });
-*/
+
     let menuUtamaLnk = document.querySelector('.mnUtama');
     menuUtamaLnk.addEventListener('click', () => window.location = "index.html");
 
